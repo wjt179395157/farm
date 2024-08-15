@@ -66,3 +66,13 @@ public:
     bool influenceall(const Soil& soil, const Market& market);
 };
 
+class Potato: public Crop{
+public:
+    Potato();
+    ~Potato();
+
+    bool judge_if_harvest() override;
+
+    bool is_soft();  //判断土豆是否为面土豆
+};
+
