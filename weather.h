@@ -3,12 +3,12 @@ using namespace std;
 
 class weather {
 protected:
-    string name;  //ÌìÆøÃû×Ö
-    int ihumidity;   //Êª¶ÈÓ°Ïì
-    int ifertility;  //·ÊÁÏÓ°Ïì
-    int ipesticideResidue;  //Å©Ò©²ĞÁôÓ°Ïì
-    int itemperature; //ÎÂ¶ÈÓ°Ïì
-    virtual int influence_humidity() = 0;    //Éè¶¨Ïà¹ØÊıÖµ
+    string name;  //å¤©æ°”åå­—
+    int ihumidity;   //æ¹¿åº¦å½±å“
+    int ifertility;  //è‚¥æ–™å½±å“
+    int ipesticideResidue;  //å†œè¯æ®‹ç•™å½±å“
+    int itemperature; //æ¸©åº¦å½±å“
+    virtual int influence_humidity() = 0;    //è®¾å®šç›¸å…³æ•°å€¼
     virtual int influence_fertility() = 0;
     virtual int influence_temperature() = 0;
     virtual int influence_pesticideResidue() = 0;
@@ -22,7 +22,7 @@ public:
     SunnyWeather() : weather("Sunny Weather") {}
     int influence_humidity()
     {
-        //Ê¾Àı
+        //ç¤ºä¾‹
         ihumidity = -1;
         return ihumidity;
     }

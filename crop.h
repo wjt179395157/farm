@@ -5,21 +5,21 @@ using namespace std;
 
 class Crop {
 protected: 
-    string name;      //×÷ÎïÃû³Æ
-    double yield = 0;     //ÊÕ¸îÊıÁ¿
-    int growthTime = 0;    //Éú³¤Ê±¼ä
-    int growthPeriod;     //Éú³¤ÖÜÆÚ
-    double irrigationRequirement;  //È±Ë®Á¿
-    double fertilizerRequirement;   //È±·ÊÁ¿
-    bool harvest = 0;   //ÊÇ·ñ³ÉÊì
-    int life = 100;   //ÉúÃüÖµ
-    int buy_in_price;  //¹ºÈë¼Û¸ñ
-    double marketValue;   //ÊĞ³¡Âô³ö¼Û¸ñ
+    string name;      //ä½œç‰©åç§°
+    double yield = 0;     //æ”¶å‰²æ•°é‡
+    int growthTime = 0;    //ç”Ÿé•¿æ—¶é—´
+    int growthPeriod;     //ç”Ÿé•¿å‘¨æœŸ
+    double irrigationRequirement;  //ç¼ºæ°´é‡
+    double fertilizerRequirement;   //ç¼ºè‚¥é‡
+    bool harvest = 0;   //æ˜¯å¦æˆç†Ÿ
+    int life = 100;   //ç”Ÿå‘½å€¼
+    int buy_in_price;  //è´­å…¥ä»·æ ¼
+    double marketValue;   //å¸‚åœºå–å‡ºä»·æ ¼
 public:
     Crop();
     virtual ~Crop() = default;
 
-    //»ñµÃÏàÓ¦±äÁ¿µÄÄÚÈİ
+    //è·å¾—ç›¸åº”å˜é‡çš„å†…å®¹
     string getName() const {  
         return name;
     }
@@ -48,14 +48,14 @@ public:
         return fertilizerRequirement;
     }
 
-    virtual bool judge_if_harvest() = 0;   //ÅĞ¶ÏÊÇ·ñ³ÉÊì
+    virtual bool judge_if_harvest() = 0;   //åˆ¤æ–­æ˜¯å¦æˆç†Ÿ
 
-    virtual bool judge_if_life() = 0;      //ÅĞ¶ÏÊÇ·ñ»¹»î×Å
+    virtual bool judge_if_life() = 0;      //åˆ¤æ–­æ˜¯å¦è¿˜æ´»ç€
     
-    virtual bool influenceall(const Soil& soil,const Market& market) = 0;    //Í¨¹ıÍÁÈÀºÍÊĞ³¡µÄĞÅÏ¢¸ü¸Ä×÷ÎïÏàÓ¦±äÁ¿µÄÖµ
+    virtual bool influenceall(const Soil& soil,const Market& market) = 0;    //é€šè¿‡åœŸå£¤å’Œå¸‚åœºçš„ä¿¡æ¯æ›´æ”¹ä½œç‰©ç›¸åº”å˜é‡çš„å€¼
 };
 
-// ¾ßÌåµÄÅÉÉúÀàÊ¾Àı
+// å…·ä½“çš„æ´¾ç”Ÿç±»ç¤ºä¾‹
 class Corn : public Crop {
 public:
     Corn();

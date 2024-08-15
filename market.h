@@ -6,23 +6,23 @@ using namespace std;
 class Market {
 
 private:
-    // ´æ´¢²»Í¬Å©³¡Æ·µÄÊĞ³¡¼Û¸ñ£¬Ê¹ÓÃÃû×Ö×÷Îª¼ü£¬¼Û¸ñ×÷ÎªÖµ
+    // å­˜å‚¨ä¸åŒå†œåœºå“çš„å¸‚åœºä»·æ ¼ï¼Œä½¿ç”¨åå­—ä½œä¸ºé”®ï¼Œä»·æ ¼ä½œä¸ºå€¼
     map<string, float> inprices;
     map<string, float> outprices;
 
 public:
-    //³õÊ¼»¯ÊĞ³¡¼Û¸ñ
+    //åˆå§‹åŒ–å¸‚åœºä»·æ ¼
     Market();
 
-    // »ñÈ¡Å©³¡Æ·µÄÂòÈë¼Û¸ñ
+    // è·å–å†œåœºå“çš„ä¹°å…¥ä»·æ ¼
     float getinPrice(const string& item) const;
 
-    // ¸Ä±äÅ©³¡Æ·µÄÂòÈë¼Û¸ñ
+    // æ”¹å˜å†œåœºå“çš„ä¹°å…¥ä»·æ ¼
     void setinPrice(const string& item, float price);
 
-    // »ñÈ¡Å©³¡Æ·µÄÂô³ö¼Û¸ñ
+    // è·å–å†œåœºå“çš„å–å‡ºä»·æ ¼
     float getoutPrice(const string& item) const;
 
-    // ¸Ä±äÅ©³¡Æ·µÄÂô³ö¼Û¸ñ
+    // æ”¹å˜å†œåœºå“çš„å–å‡ºä»·æ ¼
     void setoutPrice(const string& item, float price);
 };

@@ -1,21 +1,21 @@
 #include<weather.h>
 class Soil {
 protected:
-    float humidity = 0;  //ÍÁÈÀÊª¶È
-    float temperature = 0; //ÍÁÈÀÎÂ¶È
-    float fertility = 0;  //ÍÁÈÀ·ÊÁ¦
-    float pesticideResidue = 0;  //Å©Ò©²ĞÁô
-    int id;   //ÍÁÈÀµÄid
-    virtual void weather(const class Weather& weather) = 0;   //¸ù¾İÌìÆøĞŞ¸ÄÍÁÈÀµÄÏà¹ØÊı¾İ
-    virtual void applyFertilizer(int Fertilize) = 0;  //Ê©ÓÃ»¯·Ê
-    virtual void applyPesticide(int Pesticide) = 0;  //ÅçÅ©Ò©
-    virtual void irrigate(int water) = 0;   //¹à¸È
-    virtual void mulch(int time) = 0;     //¸²¸ÇµØÄ¤
+    float humidity = 0;  //åœŸå£¤æ¹¿åº¦
+    float temperature = 0; //åœŸå£¤æ¸©åº¦
+    float fertility = 0;  //åœŸå£¤è‚¥åŠ›
+    float pesticideResidue = 0;  //å†œè¯æ®‹ç•™
+    int id;   //åœŸå£¤çš„id
+    virtual void weather(const class Weather& weather) = 0;   //æ ¹æ®å¤©æ°”ä¿®æ”¹åœŸå£¤çš„ç›¸å…³æ•°æ®
+    virtual void applyFertilizer(int Fertilize) = 0;  //æ–½ç”¨åŒ–è‚¥
+    virtual void applyPesticide(int Pesticide) = 0;  //å–·å†œè¯
+    virtual void irrigate(int water) = 0;   //çŒæº‰
+    virtual void mulch(int time) = 0;     //è¦†ç›–åœ°è†œ
 
 public:
     Soil();
     virtual ~Soil() = default;
-    //»ñÈ¡Ïà¹Ø±äÁ¿µÄÖµ
+    //è·å–ç›¸å…³å˜é‡çš„å€¼
     float getHumidity() const {
         return humidity;
     }
@@ -37,7 +37,7 @@ public:
     }
 };
 
-//¾ßÌåµÄÅÉÉúÀà
+//å…·ä½“çš„æ´¾ç”Ÿç±»
 class ClaySoil : public Soil {
 public:
     ClaySoil() {}
