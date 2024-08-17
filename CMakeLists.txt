@@ -29,6 +29,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         soil.h
         weather.h
         策划案1.1.md
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET farm APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
