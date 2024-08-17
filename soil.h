@@ -37,7 +37,7 @@ public:
     }
 };
 
-//具体的派生类
+//具体派生类
 class ClaySoil : public Soil {
 public:
     ClaySoil() {}
